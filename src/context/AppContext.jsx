@@ -8,6 +8,8 @@ const AppContext = createContext();
 export function AppProvider({ children }) {
   const [workOut, setWorkOut] = useState(dummyData);
   const [isFormOpen, setFormOpen] = useState(false);
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+  const [cacheData, setCacheData] = useState({});
   const [editId, setEditId] = useState("");
 
   //add new workout
@@ -30,6 +32,10 @@ export function AppProvider({ children }) {
         deleteWorkout,
         editId,
         setEditId,
+        setSideBarOpen,
+        sideBarOpen,
+        cacheData,
+        setCacheData,
       }}
     >
       {children}

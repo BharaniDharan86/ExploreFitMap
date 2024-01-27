@@ -85,7 +85,7 @@ const Forms = () => {
   }
 
   return (
-    <div className="w-[100%] flex flex-col  items-center">
+    <div className="w-[100%]  flex flex-col  items-center">
       <form className=" p-4 w-[100%]" onSubmit={handleSubmit}>
         <label className="form-control w-full max-w-xs">
           <div className="label">
@@ -136,7 +136,10 @@ const Forms = () => {
           placeholder="Add Note"
         ></textarea>
 
-        <div>
+        <div className="flex justify-between p-4 items-center">
+          <button className="btn btn-md" onClick={() => setFormOpen(false)}>
+            Close
+          </button>
           <input
             type="submit"
             value="Submit"
